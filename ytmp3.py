@@ -3,9 +3,9 @@ import pyperclip, os, re, send2trash
 import moviepy.editor as mp
 
 link = pyperclip.paste()
-YouTube(link).streams.filter(only_audio=True).first().download('C:\\Emil\\Muzica')
+YouTube(link).streams.filter(only_audio=True).first().download('Your folder you want to download your music')
 
-folder = 'C:\\Emil\\Muzica'
+folder = 'Your folder you want to download your music'
 for file in os.listdir(folder):
     if re.search('mp4', file):
         mp4_path = os.path.join(folder, file)
